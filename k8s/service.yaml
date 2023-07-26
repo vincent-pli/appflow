@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: starchain-ui
+  name: starchain-ui
+spec:
+  type: NodePort
+  ports:
+    - name: 8000-tcp
+      port: 8000
+      targetPort: 3000
+      protocol: TCP
+  selector:
+    app: starchain-ui

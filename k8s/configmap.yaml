@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: starchain-ui
+data:
+ .env: |
+    PORT=3000
+    FLOWISE_USERNAME=demo
+    FLOWISE_PASSWORD=demo
+    DEBUG=true

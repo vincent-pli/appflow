@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: starchain-ui
+  name: starchain-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: starchain-ui
+  template:
+    metadata:
+      labels:
+        app: starchain-ui
+    spec:
+      containers:
+        - image: docker.io/vincentpli/llmflow:v0.01
+          imagePullPolicy: Always
+          name: starchain-ui
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          volumeMounts:
+          - name: config-volume
+            mountPath: /usr/src/packages/packages/server/.env
+            subPath: .env
+      volumes:
+        - name: config-volume
+          configMap:
+            name: starchain-ui
+
+            

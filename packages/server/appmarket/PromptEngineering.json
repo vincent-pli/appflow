@@ -1,0 +1,39 @@
+{
+    "description": "通过行业Prompt优化，高效地拓展模型功能领域，优化公式应用效果，开发定制智能算法。",
+    "nodes": [],
+    "edges": [
+        {
+            "source": "calculator_1",
+            "sourceHandle": "calculator_1-output-calculator-Calculator|Tool|StructuredTool|BaseLangChain",
+            "target": "mrklAgentLLM_0",
+            "targetHandle": "mrklAgentLLM_0-input-tools-Tool",
+            "type": "buttonedge",
+            "id": "calculator_1-calculator_1-output-calculator-Calculator|Tool|StructuredTool|BaseLangChain-mrklAgentLLM_0-mrklAgentLLM_0-input-tools-Tool",
+            "data": {
+                "label": ""
+            }
+        },
+        {
+            "source": "serpAPI_1",
+            "sourceHandle": "serpAPI_1-output-serpAPI-SerpAPI|Tool|StructuredTool|BaseLangChain",
+            "target": "mrklAgentLLM_0",
+            "targetHandle": "mrklAgentLLM_0-input-tools-Tool",
+            "type": "buttonedge",
+            "id": "serpAPI_1-serpAPI_1-output-serpAPI-SerpAPI|Tool|StructuredTool|BaseLangChain-mrklAgentLLM_0-mrklAgentLLM_0-input-tools-Tool",
+            "data": {
+                "label": ""
+            }
+        },
+        {
+            "source": "openAI_1",
+            "sourceHandle": "openAI_1-output-openAI-OpenAI|BaseLLM|BaseLanguageModel|BaseLangChain",
+            "target": "mrklAgentLLM_0",
+            "targetHandle": "mrklAgentLLM_0-input-model-BaseLanguageModel",
+            "type": "buttonedge",
+            "id": "openAI_1-openAI_1-output-openAI-OpenAI|BaseLLM|BaseLanguageModel|BaseLangChain-mrklAgentLLM_0-mrklAgentLLM_0-input-model-BaseLanguageModel",
+            "data": {
+                "label": ""
+            }
+        }
+    ]
+}

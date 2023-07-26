@@ -1,0 +1,28 @@
+{
+    "description": "使用LLM（语言模型）和文档生成技术，生成垂直领域数据集，用于优化大型语言模型在特定领域的表现。",
+    "nodes": [],
+    "edges": [
+        {
+            "source": "promptTemplate_1",
+            "sourceHandle": "promptTemplate_1-output-promptTemplate-PromptTemplate|BaseStringPromptTemplate|BasePromptTemplate",
+            "target": "llmChain_1",
+            "targetHandle": "llmChain_1-input-prompt-BasePromptTemplate",
+            "type": "buttonedge",
+            "id": "promptTemplate_1-promptTemplate_1-output-promptTemplate-PromptTemplate|BaseStringPromptTemplate|BasePromptTemplate-llmChain_1-llmChain_1-input-prompt-BasePromptTemplate",
+            "data": {
+                "label": ""
+            }
+        },
+        {
+            "source": "huggingFaceInference_LLMs_0",
+            "sourceHandle": "huggingFaceInference_LLMs_0-output-huggingFaceInference_LLMs-HuggingFaceInference|LLM|BaseLLM|BaseLanguageModel|BaseLangChain",
+            "target": "llmChain_1",
+            "targetHandle": "llmChain_1-input-model-BaseLanguageModel",
+            "type": "buttonedge",
+            "id": "huggingFaceInference_LLMs_0-huggingFaceInference_LLMs_0-output-huggingFaceInference_LLMs-HuggingFaceInference|LLM|BaseLLM|BaseLanguageModel|BaseLangChain-llmChain_1-llmChain_1-input-model-BaseLanguageModel",
+            "data": {
+                "label": ""
+            }
+        }
+    ]
+}
